@@ -23,19 +23,11 @@ export default function Home() {
             <div className="w-full md:w-1/2 mb-8 md:mb-0">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">Revolutionize Your Digital Marketing</h1>
               <p className="text-lg md:text-xl mb-6 md:mb-8">MarketMaven: Your all-in-one platform for SEO, content, social media, and more. Boost your online presence and drive results.</p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <NavLink to='/register' className="w-full sm:w-auto">
-                  <button className="w-full px-6 py-3 bg-white text-[#008080] rounded-full text-lg font-semibold hover:bg-[#E6F3F5] transition duration-300">Start Free Trial</button>
-                </NavLink>
-                <NavLink to='/login' className="w-full sm:w-auto">
-                  <button className="w-full px-6 py-3 bg-transparent border-2 border-white text-white rounded-full text-lg font-semibold hover:bg-white hover:text-[#008080] transition duration-300">Log In</button>
-                </NavLink>
-                <NavLink to='/signup' className="w-full sm:w-auto">
-                  <button className="w-full px-6 py-3 bg-[#006666] text-white rounded-full text-lg font-semibold hover:bg-[#005555] transition duration-300">Sign Up</button>
-                </NavLink>
-              </div>
+              <NavLink to='/register'>
+                <button className="w-full md:w-auto px-6 md:px-8 py-3 bg-white text-[#008080] rounded-full text-lg font-semibold hover:bg-[#E6F3F5] transition duration-300">Start Free Trial</button>
+              </NavLink>
             </div>
-            <div className="w-full md:w-1/2 mt-8 md:mt-0">
+            <div className="w-full md:w-1/2">
               <img src={Market} alt="MarketMaven" className="w-full max-w-md mx-auto rounded-lg shadow-2xl" />
             </div>
           </div>
