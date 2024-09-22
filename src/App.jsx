@@ -25,10 +25,14 @@ export default function Home() {
               <p className="text-xl mb-8">MarketMaven: Your all-in-one platform for SEO, content, social media, and more. Boost your online presence and drive results.</p>
              <NavLink to='/register'> <button className="px-8 py-3 bg-white text-[#008080] rounded-full text-lg font-semibold hover:bg-[#E6F3F5] transition duration-300">Start Free Trial</button> </NavLink>
             </div>
-            <div className="md:w-1/2 mb-4">
-              <img src={Market} width={550} height={350} className="rounded-lg shadow-2xl ml-14 p-2 mb-6 mt-0"/>
+            <div className="md:w-1/2 w-full flex justify-center md:justify-end">
+              <img 
+                src={Market} 
+                alt="MarketMaven" 
+                className="rounded-lg shadow-2xl w-full h-auto object-contain p-2 max-w-xs md:max-w-md lg:max-w-lg"
+              />
             </div>
-          </div>
+            </div>
         </section>
 
         <section id="Tools" className="py-20 bg-[#F0F0F0]">
