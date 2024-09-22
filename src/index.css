@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;          /* Full viewport width */
+    height: 100vh;         /* Full viewport height */
+    overflow-x: hidden;    /* Disable horizontal scrolling */
+    overflow-y: auto;      /* Enable vertical scrolling (right side scrollbar) */
+  }
