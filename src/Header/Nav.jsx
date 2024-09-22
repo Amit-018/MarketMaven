@@ -9,7 +9,7 @@ function Nav() {
       <header className="sticky top-0 z-50 bg-white shadow-md">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <NavLink to="/" className="flex items-center space-x-2">
-            <img src={logo} alt="MarketMaven Logo" width={40} height={80} className="rounded-full" />
+            <img src={logo} alt="MarketMaven Logo" width={80} height={60} className="rounded-full" />
             <span className="text-2xl font-bold text-[#008080]">MarketMaven</span>
           </NavLink>
           <nav className="hidden md:flex space-x-8">
