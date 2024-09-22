@@ -23,7 +23,7 @@ export default function Home() {
             <div className="md:w-1/2 mb-10 md:mb-0">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">Revolutionize Your Digital Marketing</h1>
               <p className="text-xl mb-8">MarketMaven: Your all-in-one platform for SEO, content, social media, and more. Boost your online presence and drive results.</p>
-              <button className="px-8 py-3 bg-white text-[#008080] rounded-full text-lg font-semibold hover:bg-[#E6F3F5] transition duration-300">Start Free Trial</button>
+             <NavLink to='/register'> <button className="px-8 py-3 bg-white text-[#008080] rounded-full text-lg font-semibold hover:bg-[#E6F3F5] transition duration-300">Start Free Trial</button> </NavLink>
             </div>
             <div className="md:w-1/2 mb-4">
               <img src={Market} width={550} height={350} className="rounded-lg shadow-2xl ml-14 p-2 mb-6 mt-0"/>
