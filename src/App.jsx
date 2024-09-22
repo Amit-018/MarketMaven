@@ -1,7 +1,7 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import Market from "./assets/MarketMaven.jpg"
 import office from "./assets/office.png"
+import { NavLink } from 'react-router-dom';
 
 const tools = [
   { name: "SEO Optimizer", description: "Boost your search rankings", image: "https://cdn.botpenguin.com/assets/website/Search_Engine_Optimization_d547319792.webp" },
@@ -18,31 +18,30 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-grow">
-        <section className="bg-gradient-to-r from-[#008080] to-[#87CEEB] text-white py-12 md:py-20">
+        <section className="bg-gradient-to-r from-[#008080] to-[#87CEEB] text-white py-20">
           <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
-            <div className="w-full md:w-1/2 mb-8 md:mb-0">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">Revolutionize Your Digital Marketing</h1>
-              <p className="text-lg md:text-xl mb-6 md:mb-8">MarketMaven: Your all-in-one platform for SEO, content, social media, and more. Boost your online presence and drive results.</p>
-              <NavLink to='/register'>
-                <button className="w-full md:w-auto px-6 md:px-8 py-3 bg-white text-[#008080] rounded-full text-lg font-semibold hover:bg-[#E6F3F5] transition duration-300">Start Free Trial</button>
-              </NavLink>
+            <div className="md:w-1/2 mb-10 md:mb-0">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">Revolutionize Your Digital Marketing</h1>
+              <p className="text-xl mb-8">MarketMaven: Your all-in-one platform for SEO, content, social media, and more. Boost your online presence and drive results.</p>
+             <NavLink to='/register'> <button className="px-8 py-3 bg-white text-[#008080] rounded-full text-lg font-semibold hover:bg-[#E6F3F5] transition duration-300">Start Free Trial</button> </NavLink>
             </div>
-            <div className="w-full md:w-1/2">
-              <img src={Market} alt="MarketMaven" className="w-full max-w-md mx-auto rounded-lg shadow-2xl" />
+            <div className="md:w-1/2 mb-4">
+              <img src={Market} width={550} height={350} className="rounded-lg shadow-2xl ml-14 p-2 mb-6 mt-0"/>
             </div>
           </div>
         </section>
 
-        <section id="Tools" className="py-12 md:py-20 bg-[#F0F0F0]">
+        <section id="Tools" className="py-20 bg-[#F0F0F0]">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-[#008080]">Powerful Tools for Marketing Success</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <h2 className="text-3xl font-bold text-center mb-12 text-[#008080]">Powerful Tools for Marketing Success</h2>
+            <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-8">
               {tools.map((tool, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                  <img src={tool.image} alt={tool.name} className="w-full h-48 object-cover" />
-                  <div className="p-4 md:p-6">
-                    <h3 className="text-lg md:text-xl font-semibold mb-2 text-[#008080]">{tool.name}</h3>
-                    <p className="text-sm md:text-base text-gray-600">{tool.description}</p>
+                
+                  <img src={tool.image} alt={tool.name} width={200} height={200} className="w-full" />
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold mb-2 text-[#008080]">{tool.name}</h3>
+                    <p className="text-gray-600">{tool.description}</p>
                   </div>
                 </div>
               ))}
@@ -50,72 +49,73 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-12 md:py-20 bg-[#008080] text-white">
+        <section className="py-20 bg-[#008080] text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">Why Choose MarketMaven?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <h2 className="text-3xl font-bold mb-6">Why Choose MarketMaven?</h2>
+            <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-[#006666] p-6 rounded-lg">
-                <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4">All-in-One Solution</h3>
-                <p className="text-sm md:text-base">Manage all your marketing efforts from a single, intuitive dashboard.</p>
+                <h3 className="text-xl font-semibold mb-4">All-in-One Solution</h3>
+                <p>Manage all your marketing efforts from a single, intuitive dashboard.</p>
               </div>
               <div className="bg-[#006666] p-6 rounded-lg">
-                <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4">Data-Driven Insights</h3>
-                <p className="text-sm md:text-base">Make informed decisions with our advanced analytics and reporting tools.</p>
+                <h3 className="text-xl font-semibold mb-4">Data-Driven Insights</h3>
+                <p>Make informed decisions with our advanced analytics and reporting tools.</p>
               </div>
               <div className="bg-[#006666] p-6 rounded-lg">
-                <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4">Time-Saving Automation</h3>
-                <p className="text-sm md:text-base">Streamline your workflows and focus on what matters most - growing your business.</p>
+                <h3 className="text-xl font-semibold mb-4">Time-Saving Automation</h3>
+                <p>Streamline your workflows and focus on what matters most - growing your business.</p>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="Pricing" className="py-12 md:py-20 bg-[#F0F0F0]">
-          <NavLink to='/Plans'>
-            <div className="container mx-auto px-4">
-              <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-[#008080]">Flexible Pricing for Every Business</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                {['Starter', 'Professional', 'Enterprise'].map((plan, index) => (
-                  <div key={index} className="bg-white rounded-lg shadow-lg p-6 md:p-8 hover:shadow-xl transition duration-300">
-                    <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-[#008080]">{plan}</h3>
-                    <p className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-[#008080]">${(index + 1) * 49}<span className="text-base md:text-lg font-normal">/mo</span></p>
-                    <ul className="mb-6 md:mb-8 space-y-2">
-                      {[...Array(5)].map((_, i) => (
-                        <li key={i} className="flex items-center text-sm md:text-base">
-                          <svg className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
-                          Feature {i + 1}
-                        </li>
-                      ))}
-                    </ul>
-                    <button className="w-full px-4 py-2 bg-[#008080] text-white rounded-full hover:bg-[#006666] transition duration-300 text-sm md:text-base">Choose Plan</button>
-                  </div>
-                ))}
-              </div>
+        <section id="Pricing" className="py-20 bg-[#F0F0F0]">
+        <NavLink to='/Plans'>
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12 text-[#008080]">Flexible Pricing for Every Business</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {['Starter', 'Professional', 'Enterprise'].map((plan, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300">
+                  <h3 className="text-2xl font-semibold mb-4 text-[#008080]">{plan}</h3>
+                  <p className="text-4xl font-bold mb-6 text-[#008080]">${(index + 1) * 49}<span className="text-lg font-normal">/mo</span></p>
+                  <ul className="mb-8 space-y-2">
+                    {[...Array(5)].map((_, i) => (
+                      <li key={i} className="flex items-center">
+                        <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+                        Feature {i + 1}
+                      </li>
+                    ))}
+                  </ul>
+                  <button className="w-full px-4 py-2 bg-[#008080] text-white rounded-full hover:bg-[#006666] transition duration-300">Choose Plan</button>
+                </div>
+              ))}
             </div>
+          </div>
           </NavLink>
         </section>
 
-        <section id="about" className="py-12 md:py-20 bg-white">
+        <section id="about" className="py-20 bg-white">
           <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
-            <div className="w-full md:w-1/2 mb-8 md:mb-0">
-              <img src={office} alt="About MarketMaven" className="w-full rounded-lg shadow-lg" />
+            <div className="md:w-1/2 mb-10 md:mb-0">
+              <img src={office} alt="About MarketMaven" width={550} height={10} className="rounded-lg shadow-lg" />
             </div>
-            <div className="w-full md:w-1/2 md:pl-6">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-[#008080]">About MarketMaven</h2>
-              <p className="text-base md:text-lg mb-4 md:mb-6 text-gray-700">MarketMaven was born from a passion to simplify digital marketing. Our platform is designed to empower businesses of all sizes to achieve their marketing goals efficiently and effectively.</p>
-              <p className="text-base md:text-lg text-gray-700">With a focus on innovation and user experience, we strive to provide the best tools and resources to help you succeed in the digital world.</p>
+            <div className="md:w-1/2 md:pl-6">
+              <h2 className="text-3xl font-bold mb-6 text-[#008080]">About MarketMaven</h2>
+              <p className="text-lg mb-6 text-gray-700">MarketMaven was born from a passion to simplify digital marketing. Our platform is designed to empower businesses of all sizes to achieve their marketing goals efficiently and effectively.</p>
+              <p className="text-lg text-gray-700">With a focus on innovation and user experience, we strive to provide the best tools and resources to help you succeed in the digital world.</p>
             </div>
           </div>
         </section>
 
-        <section id="contact" className="py-12 md:py-20 bg-[#008080] text-white">
+        <section id="contact" className="py-20 bg-[#008080] text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Get in Touch</h2>
-            <p className="text-base md:text-lg mb-6 md:mb-8">Have questions or want to learn more? We'd love to hear from you!</p>
-            <a href="mailto:support@marketmaven.com" className="inline-block px-6 md:px-8 py-3 bg-white text-[#008080] rounded-full text-base md:text-lg font-semibold hover:bg-[#E6F3F5] transition duration-300">Email Us</a>
+            <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
+            <p className="text-lg mb-6">Have questions or want to learn more? We'd love to hear from you!</p>
+            <a href="mailto:support@marketmaven.com" className="px-8 py-3 bg-white text-[#008080] rounded-full text-lg font-semibold hover:bg-[#E6F3F5] transition duration-300">Email Us</a>
           </div>
         </section>
       </main>
+
     </div>
   );
 }
