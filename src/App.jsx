@@ -40,13 +40,35 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-center mb-12 text-[#008080]">Powerful Tools for Marketing Success</h2>
             <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-8">
               {tools.map((tool, index) => (
+                
+                console.log(tool),
                 <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
                 
+                <NavLink to={
+                tool.name === "SEO Optimizer"
+            ? "/SEO"
+            : tool.name === "Content Marketing"
+            ? "/Content"
+            : tool.name === "Social-Media Management"
+            ? "/Social"
+            : tool.name === "Email Marketing"
+            ? "/Email"
+            : tool.name === "Pay-Per-Click"
+            ? "/Ppc"
+            : tool.name === "Analytics & Reporting"
+            ? "/Analytics"
+            : tool.name === "Marketing Automation"
+            ? "/Marketing"
+            : "/keyword"
+                }>
+
+
                   <img src={tool.image} alt={tool.name} width={200} height={200} className="w-full" />
                   <div className="p-6">
                     <h3 className="text-xl font-semibold mb-2 text-[#008080]">{tool.name}</h3>
                     <p className="text-gray-600">{tool.description}</p>
                   </div>
+                  </NavLink>
                 </div>
               ))}
             </div>
